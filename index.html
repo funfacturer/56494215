@@ -1,0 +1,48 @@
+<!-- head: unsichtbar/Gehirn -->
+<!-- body: sichtbar-->
+<!-- header: oberer Bereich der Seite/body-->
+<!-- main: Hauptbereich der Seite/body-->
+<!-- footer: unterster Bereich der Website/body-->
+<!-- script: JS code, Bewegung, Funktionalität -->
+
+
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TODO</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- icon bibliothek -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <!-- Haupt-Container -->
+        <div class="app-container">
+            <header>
+                <h1>TODO</h1>
+            </header>
+            <form id="add-todo-form">
+                <input
+                    type="text"
+                    id="todo-input"
+                    placeholder="Was möchtest du hinzufügen?"
+                    autocomplete="off"
+                    required
+                />
+                <button type="submit" class="add-btn">
+                    <i class="fas fa-plus-circle"></i>
+                </button>
+            </form>
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Alle</button>
+                <button class="filter-btn active" data-filter="open">Offen</button>
+                <button class="filter-btn active" data-filter="done">Erledigt</button>
+            </div>
+            <ul class="todo-list" id="todo-list">
+
+            </ul>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

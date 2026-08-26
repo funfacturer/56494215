@@ -1,0 +1,157 @@
+/*======================================================================================
+                GRUND-STYLING & LAYOUT
+======================================================================================*/
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdona, sans-serif;
+    background-color:#f4f7f6;
+    color:#333;
+    display:flex;
+    justify-content:center;
+    align-items: flex-start;
+    min-height:100vh;
+    padding-top:5rem;
+}
+
+.app-container {
+    width:100%;
+    max-width:550px;
+    background-color:#fff;
+    padding:2rem;
+    border-radius:12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    text-align:center;
+    color:#2c3e50;
+    margin-bottom:2rem;
+}
+
+/*======================================================================================
+                FORMULAR (INPUT & BUTTON)
+======================================================================================*/
+
+#add-todo-form {
+    display:flex;
+    gap:0.5rem;
+    margin-bottom:2rem;
+}
+
+#todo-input {
+    flex-grow:1;
+    padding:0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius:8px;
+    font-size:1rem;
+    transition:border-color 0.3s ease;
+}
+
+#todo-input:focus {
+    outline:none;
+    border-color: #007bff;
+}
+
+.add-btn {
+    background-color:#007bff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:1.5rem;
+    padding:0 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #0056b3;
+}
+
+/*======================================================================================
+                FILTER-BUTTONS
+======================================================================================*/
+
+.filter-container {
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    margin-bottom:2rem;
+}
+
+.filter-btn {
+    background: none;
+    border: 2px solid transparent;
+    color: #6c757d;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+/*======================================================================================
+                TO-DO-LISTE
+======================================================================================*/
+
+.todo-list {
+    list-style: none;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.todo-item span {
+    flex-grow: 1;
+    margin: 0 1rem;
+}
+
+.todo-item.done span {
+    text-decoration: line-through;
+    color: #adb5bd;
+}
+
+.todo-actions button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.complete-btn {
+    color: #28a745;
+}
+
+.delete-btn {
+    color: #dc3545;
+}
+
+.complete-btn:hover {
+    color: #218838;
+}
+
+.delete-btn:hover {
+    color: #c82333;
+}
+
+.todo-item.done .complete-btn {
+    color: #adb5bd;
+}
